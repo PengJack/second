@@ -9,3 +9,12 @@ arr.forEach(function(item, index) {
     myArr.push(item);
   }
 })
+
+// 方法二： 通过另一个数组
+var arr = [1,2,'a', 'b', 'a', 1, 2, 'd'];
+var newArr = [];
+arr.forEach((item, index) => {
+  if(newArr.indexOf(item) < 0) {
+    newArr.push(item);
+  }
+})
