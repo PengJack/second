@@ -18,3 +18,10 @@ arr.forEach((item, index) => {
     newArr.push(item);
   }
 })
+
+// 方法三： 通过 filter 方法
+var arr = [1,2,'a', 'b', 'a', 1, 2, 'd'];
+var newArr = [];
+arr.filter((item, index, self) => {
+  return self.indexOf(item) === index;
+})
