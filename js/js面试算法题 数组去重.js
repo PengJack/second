@@ -25,3 +25,11 @@ var newArr = [];
 arr.filter((item, index, self) => {
   return self.indexOf(item) === index;
 })
+
+// 方法四： 通过转换为 Set 结构去重
+var arr = [1,2,'a', 'b', 'a', 1, 2, 'd'];
+var newArr = Array.from(new Set(arr))
+
+// 方法5： 利用 Set 和 三点运算符
+var arr = [1,2,'a', 'b', 'a', 1, 2, 'd'];
+var newArr = [...new Set(arr)];
