@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<!--   
+  自身浮动法的原理就是使用对左右使用分别使用 float:left 和 float:right，
+  float 使左右两个元素脱离文档流，中间元素正常在正常文档流中，
+  使用 margin 指定左右外边距对其进行一个定位。 
+-->
+<head>
+  <meta charset=“UTF-8”>
+  <title>layout_box</title>
+
+
+
+  <style>
+    .container {
+      display: flex;
+
+    }
+    .left {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+    .center {
+      flex: 1;
+      background-color: red;
+    }
+    .right {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class='left'> 我是左边 </div>
+    <div class='right'> 我是右边 </div>
+    <div class='center'> 我是中间 </div> 
+
+  </div>
+</body>
+
+
+</html>
